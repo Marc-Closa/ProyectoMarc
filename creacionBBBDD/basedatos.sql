@@ -24,18 +24,17 @@ VALUES
 CREATE TABLE Usuarios (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(50) NOT NULL,
-    email VARCHAR(100) UNIQUE NOT NULL,
     pass VARCHAR(255) NOT NULL
 );
 
 -- Usuario admin con contraseña hashada "123"
-INSERT INTO Usuarios (nombre, email, pass)
-VALUES ('admin', 'admin@example.com', '123');
+INSERT INTO Usuarios (nombre, pass)
+VALUES ('admin', '123');
 
 -- Usuario aleatorio 1
-INSERT INTO Usuarios (nombre, email, pass)
-VALUES ('Juan Lopez', 'juan.lopez@example.com', '123');
+INSERT INTO Usuarios (nombre, pass)
+VALUES ('Juan Lopez', '123');
 
 -- Usuario aleatorio 2
-INSERT INTO Usuarios (nombre, email, pass)
-VALUES ('Maria Gonzalez', 'maria.gonzalez@example.com', '123');
+INSERT INTO Usuarios (nombre, pass)
+VALUES ('Maria Gonzalez', '123');

@@ -6,13 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-
-    <h1>Login o registrarse:</h1>
-    <ul>
-        <li><a href="login.php">Login</a></li>
-        <li><a href="registro.php">Registro</a></li>
-    </ul>
-
     <h1>Comida china</h1>
 
     <?php

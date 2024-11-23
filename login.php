@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
+    
+    <?php
+    include("mensajeSession.php");
+    ?>
+
     <h1>Inicia sesión</h1>
     <form action="validarLoguin.php" method="post">
     <label for="nombre">Nombre:</label>

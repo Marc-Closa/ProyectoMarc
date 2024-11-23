@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-
+    
     <h1>Login o registrarse:</h1>
     <ul>
         <li><a href="login.php">Login</a></li>
@@ -14,6 +14,12 @@
     </ul>
 
     <h1>Comida china</h1>
+
+    <?php
+    session_start();
+    echo "$_session['mensaje']";
+    ?>
+
 
     <?php
             // Me conecto a la BBDD
