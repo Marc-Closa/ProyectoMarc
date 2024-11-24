@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicia sesión</title>
+    <title>Registro</title>
     <style>
         /* Estilo general */
         body {
@@ -75,7 +75,7 @@
     include("mensajeSession.php");
     ?>
 
-    <form action="validarLoguin.php" method="post">
+    <form action="grabarUsuario.php" method="post">
         <h1>Registro</h1>
         <div class="mensaje">
             <?php
@@ -90,9 +90,9 @@
         <input id="nombre" type="text" name="nombre">
         
         <label for="password">Contraseña:</label>
-        <input id="password" type="password" name="password">
+        <input id="password" type="password" name="pass">
         
-        <input type="submit" value="Iniciar sesión">
+        <input type="submit" value="Registrate">
     </form>
 </body>
 </html>
