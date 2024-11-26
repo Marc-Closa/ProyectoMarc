@@ -40,7 +40,7 @@ INSERT INTO Usuarios (nombre, pass)
 VALUES ('Maria Gonzalez', '123');
 
 CREATE TABLE Pedidos (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+    id_pedido INT PRIMARY KEY AUTO_INCREMENT,
     nombre VARCHAR(50) NOT NULL,
     cantidad VARCHAR(255) NOT NULL,
     precio DECIMAL(10,2) NOT NULL
@@ -48,3 +48,6 @@ CREATE TABLE Pedidos (
 
 INSERT INTO Pedidos (nombre, cantidad, precio)
 VALUES ('Producto A', '1', 10.50);
+
+INSERT INTO Pedidos (nombre, cantidad, precio)
+VALUES ('Producto B', '2', 18.00);
