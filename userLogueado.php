@@ -95,6 +95,7 @@
         }
     </style>
     <?php
+    
     // Mensaje de inicio de sesión
     include("mensajeSession.php");
     ?>
