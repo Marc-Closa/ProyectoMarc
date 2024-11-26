@@ -13,6 +13,7 @@
             background-color: #1c1c1c; /* Fondo negro */
             color: #f5f5f5; /* Texto claro */
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -62,6 +63,21 @@
         input[type="submit"]:hover {
             background-color: #d4af37; /* Dorado */
         }
+        .link-button {
+            display: inline-block;
+            text-align: center;
+            background-color: #d32f2f; /* Rojo elegante */
+            color: #f5f5f5; /* Texto claro */
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            padding: 10px 20px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+        .link-button:hover {
+            background-color: #d4af37; /* Dorado */
+        }
         .mensaje {
             text-align: center;
             color: #d32f2f; /* Rojo elegante */
@@ -71,6 +87,7 @@
     </style>
 </head>
 <body>
+<a href="index.php" class="link-button">Volver a la página principal</a><br>
     <?php
     include("mensajeSession.php");
     ?>
