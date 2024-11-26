@@ -23,18 +23,21 @@
 
     
     if($row_count >= 1){
-        $_SESSION["mensaje"] = "<h2>Has iniciado sesión correctamente con el usuario '$nomb'</h2>";
-        Header("Location:userlogueado.php");;
         //Todo bien
+        $_SESSION["mensaje"] = "<h2>Has iniciado sesión correctamente con el usuario '$nomb'</h2>";
+        Header("Location:userlogueado.php");
+        
     }else{
-        echo "datos mal";
         //Credenciales incorrectas
+        $_SESSION["mensaje"] = "Credenciales incorrectas";
+        Header("Location:login.php");
+        
     }
 
 
     }
+
     // Aqui me falta uno o dos parametros
-  
     else {
         $_SESSION["mensaje"] = "Faltan parametros por enviar";
         Header("Location:login.php");

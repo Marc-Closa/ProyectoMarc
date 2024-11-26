@@ -71,10 +71,13 @@
             font-weight: bold;
         }
     </style>
-</head>
-<body>
-
     
+    <?php
+    include("mensajeSession.php");
+    ?>
+
+</head>
+<body> 
 
     <form action="validarLogin.php" method="post">
     <h1>Inicia sesión</h1>
@@ -87,9 +90,7 @@
         <input type="submit">
     </form>
     <br>
-    <?php
-    include("mensajeSession.php");
-    ?>
+
     </br>
 </body>
 </html>
