@@ -38,3 +38,13 @@ VALUES ('Juan Lopez', '123');
 -- Usuario aleatorio 2
 INSERT INTO Usuarios (nombre, pass)
 VALUES ('Maria Gonzalez', '123');
+
+CREATE TABLE Pedidos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50) NOT NULL,
+    cantidad VARCHAR(255) NOT NULL,
+    precio DECIMAL(10,2) NOT NULL
+);
+
+INSERT INTO Pedidos (nombre, cantidad, precio)
+VALUES ('Producto A', '1', 10.50);
