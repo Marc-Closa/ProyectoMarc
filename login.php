@@ -76,7 +76,7 @@
 
     
 
-    <form action="validarLoguin.php" method="post">
+    <form action="validarLogin.php" method="post">
     <h1>Inicia sesión</h1>
         <label for="nombre">Nombre:</label>
         <input id="nombre" type="text" name="nombre">
