@@ -100,7 +100,7 @@
     </style>
 </head>
 <body>
-    <h1>Comida china</h1>
+    <h1>El dragón de marc</h1>
         <h2>Login o <br> registro:</h2>
     <ul>
         <li><a href="login.php">Login</a></li>
@@ -130,13 +130,11 @@
             }
             // Cerramos la conexión
             $conn->close(); 
+
+            include("footer.php");
         ?>
 
     </div>
-
-    <footer>
-        © 2024 Restaurante Chino. Todos los derechos reservados.
-    </footer>
     
 </body>
 </html>
