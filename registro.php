@@ -84,7 +84,9 @@
                 echo htmlspecialchars($_SESSION['mensaje']);
                 unset($_SESSION['mensaje']); // Limpiar mensaje de sesión después de mostrarlo
             }
+
             ?>
+        
         </div>
         <label for="nombre">Nombre:</label>
         <input id="nombre" type="text" name="nombre">
@@ -92,7 +94,7 @@
         <label for="password">Contraseña:</label>
         <input id="password" type="password" name="pass">
         
-        <input type="submit" value="Registrate">
+        <input type="submit" value="Enviar">
     </form>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <?php
     // Llegamos a esta pagina cuando un usuario quiere registrarse
+    // inluimos la página de mensaje
     include("mensajeSession.php");
 
     // Comprobamos que nos vienen los 2 parámetros
@@ -31,7 +32,7 @@
     }
     else {
         $_SESSION["mensaje"] = "Falta algún parámetro";
-        header("Location: registro.php");
+        Header("Location: registro.php");
     }
 
     // Mandar a pagina principal y mensaje 
