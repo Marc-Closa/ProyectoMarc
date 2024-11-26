@@ -161,8 +161,13 @@
             echo "<td><p><a href='borrar.php?id=" . $row['id_pedido'] . "'>Eliminar</a></p></td>";
             echo "</tr>";
         }
-
+        
         echo "</table>";
+
+        // cerrar conexión bbdd
+        $conn->close();
+
+
     ?>
 
 </body>
