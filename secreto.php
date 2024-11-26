@@ -88,6 +88,7 @@
 <body>
     <?php
     include("pagPrincipal.php");
+    include("mensajeSession.php");
     ?>
     <?php
         // Me conecto a la BBDD
@@ -112,7 +113,7 @@
             echo "<td><h3>" . htmlspecialchars($row['nombre']) . "</h3></td>";
             echo "<td><p class='precio'>" . htmlspecialchars($row['precio']) . "</p></td>";
             echo "<td><p>" . htmlspecialchars($row['descripcion']) . "</p></td>";
-            echo "<td><p><a href='borrar.php?id=" . $row['id_producto'] . "'>Eliminar</a></p></td>";
+            echo "<td><p><a href='borrarProducto.php?id=" . $row['id_producto'] . "'>Eliminar</a></p></td>";
             echo "</tr>";
         }
 
@@ -135,7 +136,7 @@
             echo "<tr>";
             echo "<td><h3>" . htmlspecialchars($row['nombre']) . "</h3></td>";
             echo "<td><p>" . htmlspecialchars($row['pass']) . "</p></td>";
-            echo "<td><p><a href='borrar.php?id=" . $row['id'] . "'>Eliminar</a></p></td>";
+            echo "<td><p><a href='borrarUsuario.php?id=" . $row['id'] . "'>Eliminar</a></p></td>";
             echo "</tr>";
         }
 
@@ -160,7 +161,7 @@
             echo "<td><h3>" . htmlspecialchars($row['nombre']) . "</h3></td>";
             echo "<td><p>" . htmlspecialchars($row['cantidad']) . "</p></td>";
             echo "<td><p>" . htmlspecialchars($row['precio']) . "</p></td>";
-            echo "<td><p><a href='borrar.php?id=" . $row['id_pedido'] . "'>Eliminar</a></p></td>";
+            echo "<td><p><a href='borrarPedido.php?id=" . $row['id_pedido'] . "'>Eliminar</a></p></td>";
             echo "</tr>";
         }
 
