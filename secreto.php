@@ -86,7 +86,9 @@
     <h1><b><u>Administrador</u></b></h1>
 </head>
 <body>
-
+    <?php
+    include("pagPrincipal.php");
+    ?>
     <?php
         // Me conecto a la BBDD
         include("conBaseDatos.php");
@@ -161,7 +163,7 @@
             echo "<td><p><a href='borrar.php?id=" . $row['id_pedido'] . "'>Eliminar</a></p></td>";
             echo "</tr>";
         }
-        
+
         echo "</table>";
 
         // cerrar conexión bbdd
