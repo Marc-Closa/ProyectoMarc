@@ -113,12 +113,16 @@
     <?php
             // Me conecto a la BBDD
             include("conBaseDatos.php");
+
             // Hago una consulta a todos los productos
             $sql = "SELECT * FROM productos";
+
             // Muestro de cada producto: Nombre, Descripcion, Imagen, Precio
             $result = $conn->query($sql);
+
             // Mostrar el resultado
             $row_count = $result->num_rows;
+
             // Recoger los datos
             while($row = $result->fetch_assoc()) {
                 echo "<div class='producto'>";
@@ -128,6 +132,7 @@
                 echo "<p class='precio'>Precio: $" . htmlspecialchars($row['precio']) . "</p>";
                 echo "</div>";
             }
+            
             // Cerramos la conexión
             $conn->close(); 
 
