@@ -106,7 +106,9 @@
         <li><a href="login.php">Login</a></li>
         <li><a href="registro.php">Registro</a></li>
     </ul>
-
+    <?php
+    include("mensajeSession.php");
+    ?>
     <h1>Nuestra carta</h1>
 
     <div class="productos">
