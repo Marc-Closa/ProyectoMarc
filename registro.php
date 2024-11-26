@@ -90,6 +90,9 @@
 
     <?php
     include("mensajeSession.php");
+    ?>
+
+    <?php
     include("pagPrincipal.php");
     ?>
 
