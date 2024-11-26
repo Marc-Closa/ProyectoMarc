@@ -87,9 +87,10 @@
     </style>
 </head>
 <body>
-<a href="index.php" class="link-button">Volver a la página principal</a><br>
+
     <?php
     include("mensajeSession.php");
+    include("pagPrincipal.php");
     ?>
 
     <form action="grabarUsuario.php" method="post">

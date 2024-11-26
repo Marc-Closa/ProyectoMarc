@@ -60,24 +60,6 @@
             cursor: pointer;
             width: 100%;
         }
-        input[type="submit"]:hover {
-            background-color: #d4af37; /* Dorado */
-        }
-        .link-button {
-            display: inline-block;
-            text-align: center;
-            background-color: #d32f2f; /* Rojo elegante */
-            color: #f5f5f5; /* Texto claro */
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-            padding: 10px 20px;
-            margin-top: 15px;
-            cursor: pointer;
-        }
-        .link-button:hover {
-            background-color: #d4af37; /* Dorado */
-        }
         .mensaje {
             text-align: center;
             color: #d32f2f; /* Rojo elegante */
@@ -87,7 +69,9 @@
     </style>
 </head>
 <body> 
-    <a href="index.php" class="link-button">Volver a la página principal</a><br>
+    <?php
+    include("pagPrincipal.php");
+    ?>
     
     <form action="validarLogin.php" method="post">
         <h1>Inicia sesión</h1>

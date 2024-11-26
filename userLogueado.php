@@ -98,6 +98,7 @@
     
     // Mensaje de inicio de sesión
     include("mensajeSession.php");
+    include("pagPrincipal.php");
     ?>
 
 </head>
