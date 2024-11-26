@@ -11,7 +11,16 @@
 
     //3. me conecto a la BBDD
     include("conBaseDatos.php");
-    
+        // Si el usuario es admin lo redirigo a página secreta
+        if($nomb == 'admin' && $cont == '123'
+            || $nomb == 'Admin' && $cont == '123'
+            || $nomb == 'ADMIN' && $cont == '123'){
+            header("location:secreto.php");
+        }
+        else{
+            
+        // Sino compruebo que inicie bien sesión
+
     //4. Construyo la consulta
     $sql = "SELECT * FROM usuarios WHERE nombre = '$nomb' and pass = '$cont'";
 
@@ -34,6 +43,8 @@
         
     }
 
+        }
+    
 
     }
 
