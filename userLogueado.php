@@ -131,10 +131,36 @@
             // Cerramos la conexión
             $conn->close(); 
 
-            include("footer.php");
         ?>
-
     </div>
+    <h1>Añadir Poducto</h1>
+    <form action="addCarrito.php" method="post">
+
+
+  <!-- Categoría del producto -->
+  <label for="productCategory">Producto:</label>
+  <select id="productCategory" name="productCategory" required>
+    <option value="">Seleccione una categoría</option>
+    <option value="Pato Pekinés">Pato Pekinés</option>
+    <option value="Arroz frito">Arroz frito</option>
+    <option value="Pollo Kung Pao">Pollo Kung Pao</option>
+    <option value="Dim Sum">Dim Sum</option>
+    <option value="Sopa agripicante">Sopa agripicante</option>
+    <option value="Mapo Tofu">Mapo Tofu</option>
+    <option value="Chow Mein">Chow Mein</option>
+    <option value="Cerdo a la Mostaza">Cerdo a la Mostaza</option>
+    <option value="Sopa de Wonton">Sopa de Wonton</option>
+  </select>
+  <br><br>
+
+
+  <!-- Botón de enviar -->
+  <button type="submit">Añadir Producto</button>
+</form>
+    
+    <footer>
+        © 2024 Restaurante Chino. Todos los derechos reservados.
+    </footer>
     
 </body>
 </html>
