@@ -93,6 +93,17 @@
             margin-top: 20px;
             font-size: 0.9em;
         }
+        a {
+            inline-block; padding: 10px 20px; 
+            background-color: #d32f2f; 
+            color: #fff; 
+            text-align: center; 
+            font-weight: bold; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            margin-top: 10px; 
+            transition: background-color 0.3s;
+        }
     </style>
     <?php
     
@@ -100,7 +111,7 @@
     include("mensajeSession.php");
     include("pagPrincipal.php");
     ?>
-
+        <a href="verCarrito.php" class="link-button">Ver carrito</a><br>
 </head>
 <body>
 
@@ -126,38 +137,19 @@
                 echo "<p>" . htmlspecialchars($row['descripcion']) . "</p>";
                 echo "<img src='imagenes/" . htmlspecialchars($row['imagen']) . "' alt='" . htmlspecialchars($row['nombre']) . "'>";
                 echo "<p class='precio'>Precio: $" . htmlspecialchars($row['precio']) . "</p>";
+                echo "<a href='addCarrito.php?id_producto=" . $row['id_producto'] . "''> 
+          Agregar al carrito
+      </a>";
+
                 echo "</div>";
             }
             // Cerramos la conexión
             $conn->close(); 
 
         ?>
-    </div>
-    <h1>Añadir Poducto</h1>
-    <form action="addCarrito.php" method="post">
-
-
-  <!-- Categoría del producto -->
-  <label for="productCategory">Producto:</label>
-  <select id="productCategory" name="productCategory" required>
-    <option value="">Seleccione una categoría</option>
-    <option value="Pato Pekinés">Pato Pekinés</option>
-    <option value="Arroz frito">Arroz frito</option>
-    <option value="Pollo Kung Pao">Pollo Kung Pao</option>
-    <option value="Dim Sum">Dim Sum</option>
-    <option value="Sopa agripicante">Sopa agripicante</option>
-    <option value="Mapo Tofu">Mapo Tofu</option>
-    <option value="Chow Mein">Chow Mein</option>
-    <option value="Cerdo a la Mostaza">Cerdo a la Mostaza</option>
-    <option value="Sopa de Wonton">Sopa de Wonton</option>
-  </select>
-  <br><br>
-
-
-  <!-- Botón de enviar -->
-  <button type="submit">Añadir Producto</button>
-</form>
     
+</div>
+
     <footer>
         © 2024 Restaurante Chino. Todos los derechos reservados.
     </footer>
