@@ -137,9 +137,8 @@
                 echo "<p>" . htmlspecialchars($row['descripcion']) . "</p>";
                 echo "<img src='imagenes/" . htmlspecialchars($row['imagen']) . "' alt='" . htmlspecialchars($row['nombre']) . "'>";
                 echo "<p class='precio'>Precio: $" . htmlspecialchars($row['precio']) . "</p>";
-                echo "<a href='addCarrito.php?id_producto=" . $row['id_producto'] . "''> 
-          Agregar al carrito
-      </a>";
+                echo "<a href='addCarrito.php?id_producto=" . $row['id_producto'] . "'>
+                Agregar al carrito</a>"; 
 
                 echo "</div>";
             }

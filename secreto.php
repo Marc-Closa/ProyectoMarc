@@ -21,7 +21,14 @@
             border-bottom: 2px solid #d4af37; /* Línea dorada */
             padding-bottom: 10px;
         }
-
+        h2 {
+            text-align: left;
+            color: #d32f2f; /* Rojo elegante */
+            font-weight: bold;
+            margin-top: 20px;
+            margin-left: 20px;
+            padding-bottom: 10px;
+        }
         table {
             width: 90%;
             margin: 20px auto;

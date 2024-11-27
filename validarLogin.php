@@ -1,6 +1,6 @@
 <?php
-  session_start();
-  var_dump($_REQUEST);
+     session_start();
+
     //1. Me aseguro que viene el dato
     if(!empty($_REQUEST["nombre"]) && !empty($_REQUEST["contraseña"]) ){
     // CORRECTO: Me vienen los dos parametros
@@ -15,6 +15,8 @@
         if($nomb == 'admin' && $cont == '123'
             || $nomb == 'Admin' && $cont == '123'
             || $nomb == 'ADMIN' && $cont == '123'){
+            
+            $_SESSION["mensaje"] = "<h2>Has inicado sesión con admin</h2>";
             header("location:secreto.php");
         }
         else{
