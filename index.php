@@ -138,10 +138,14 @@
             // Cerramos la conexión
             $conn->close(); 
 
-            include("footer.php");
+
         ?>
 
     </div>
+    
+    <footer>
+        © 2024 Restaurante Chino. Todos los derechos reservados.
+    </footer>
     
 </body>
 </html>

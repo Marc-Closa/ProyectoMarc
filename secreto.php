@@ -91,8 +91,10 @@
     include("mensajeSession.php");
     ?>
     <?php
-        // Me conecto a la BBDD
-        include("conBaseDatos.php");
+    
+    // PRODUCTOS
+    // Me conecto a la BBDD
+    include("conBaseDatos.php");
 
         // Hago una consulta a todos los productos
         $sql = "SELECT * FROM productos";
@@ -110,15 +112,26 @@
 
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
+            echo "<td><h3>" . htmlspecialchars($row['id_producto']) . "</h3></td>";
             echo "<td><h3>" . htmlspecialchars($row['nombre']) . "</h3></td>";
             echo "<td><p class='precio'>" . htmlspecialchars($row['precio']) . "</p></td>";
             echo "<td><p>" . htmlspecialchars($row['descripcion']) . "</p></td>";
-            echo "<td><p><a href='borrarProducto.php?id=" . $row['id_producto'] . "'>Eliminar</a></p></td>";
+            echo "<td><p><a href='borrarProducto.php?id_producto=" . $row['id_producto'] . "'>Eliminar</a></p></td>";
             echo "</tr>";
         }
 
         echo "</table>";
 
+        // cerrar conexión bbdd
+        $conn->close();
+
+
+
+
+        // USUARIOS
+        // Me conecto a la BBDD
+        include("conBaseDatos.php");
+        
         // Hago una consulta a todos los usuarios
         $sql = "SELECT * FROM usuarios";
         $result = $conn->query($sql);
@@ -142,6 +155,17 @@
 
         echo "</table>";
 
+        // cerrar conexión bbdd
+        $conn->close();
+
+        
+
+
+
+        // PEDIDOS
+        // Me conecto a la BBDD
+        include("conBaseDatos.php");
+
         // Hago una consulta a todos los pedidos
         $sql = "SELECT * FROM pedidos";
         $result = $conn->query($sql);
@@ -161,7 +185,7 @@
             echo "<td><h3>" . htmlspecialchars($row['nombre']) . "</h3></td>";
             echo "<td><p>" . htmlspecialchars($row['cantidad']) . "</p></td>";
             echo "<td><p>" . htmlspecialchars($row['precio']) . "</p></td>";
-            echo "<td><p><a href='borrarPedido.php?id=" . $row['id_pedido'] . "'>Eliminar</a></p></td>";
+            echo "<td><p><a href='borrarPedido.php?id_pedido=" . $row['id_pedido'] . "'>Eliminar</a></p></td>";
             echo "</tr>";
         }
 
@@ -170,8 +194,9 @@
         // cerrar conexión bbdd
         $conn->close();
 
-
     ?>
+
+
 
 </body>
 </html>

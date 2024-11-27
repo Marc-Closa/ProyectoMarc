@@ -3,7 +3,6 @@
 // Recoger el id
 $id = $_REQUEST["id"];
 
- 
 // conexión con la base de datos
 include("conBaseDatos.php");
 
