@@ -93,6 +93,8 @@
     <h1><b><u>Administrador</u></b></h1>
 </head>
 <body>
+<a href="login.php" class="link-button">Cerrar sesión</a><br>
+
     <?php
     include("pagPrincipal.php");
     include("mensajeSession.php");
@@ -200,7 +202,10 @@
 
         // cerrar conexión bbdd
         $conn->close();
+        
 
+
+        
     ?>
 
 
