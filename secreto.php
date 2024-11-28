@@ -111,8 +111,10 @@
 
         // Mostrar el resultado
         echo "<h1>Productos</h1>";
+        echo "<a href='añadirProducto.php' class='link-button'>Añadir producto</a><br>";
         echo "<table>";
         echo "<tr>";
+        echo "<th>ID</th>";
         echo "<th>Nombre</th>";
         echo "<th>Precio</th>";
         echo "<th>Descripción</th>";
