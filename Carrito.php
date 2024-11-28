@@ -95,28 +95,34 @@
               |
               <a href='?comprar=1' style='padding: 10px 20px; background-color: #2ecc71; color: white; text-align: center; font-weight: bold; text-decoration: none; border-radius: 5px;'>Realizar Compra</a>";
     } else {
-        echo "<p style='color: #2ecc71;'>El carrito está vacío.</p>";
+        echo "<p style='color: #d41c1c;'>El carrito está vacío.</p>";
     }
 
     // Procesamos la compra
     if (isset($_GET['comprar']) && !empty($_SESSION['carro'])) {
-        $cliente_id = $_SESSION['id'];
-        foreach ($_SESSION['carro'] as $id_producto => $producto) {
-            $cantidad = $producto['cantidad'];
-            $precio_total = $producto['precio'] * $cantidad;
+    $cliente_id = $_SESSION['id'];
 
-            // Insertamos pedido en la base de datos
-            $sql = "INSERT INTO pedidos (id_cliente, id_producto, cantidad, precio_total) 
-                    VALUES ('$cliente_id', '$id_producto', '$cantidad', '$precio_total')";
-            
-            if ($conn->query($sql) === TRUE) {
-                echo "<p style='color: #2ecc71;'>Pedido realizado con éxito.</p>";
-            } else {
-                echo "<p style='color: #e74c3c;'>Error al realizar el pedido: " . $conn->error . "</p>";
-            }
+    // Recorremos los productos en el carrito
+    foreach ($_SESSION['carro'] as $id_producto => $producto) {
+        $cantidad = $producto['cantidad'];
+        $precio_total = $producto['precio'] * $cantidad;
+        $nombre = $producto['nombre'];
+
+        // Insertamos el pedido en la base de datos
+        $sql = "INSERT INTO pedidos (id_cliente, id_producto, cantidad, precio_total) 
+                VALUES ('$cliente_id', '$id_producto', '$cantidad', '$precio_total')";
+                
+        if ($conn->query($sql) === TRUE) {
+            echo "<p style='color: #2ecc71;'>Pedido de '{$producto['nombre']}' realizado con éxito.</p>";
+        } else {
+            echo "<p style='color: #e74c3c;'>Error al realizar el pedido: " . $conn->error . "</p>";
         }
-        unset($_SESSION['carro']); // Vaciamos el carrito después de la compra
     }
+
+    // Vaciar el carrito después de realizar la compra
+    unset($_SESSION['carro']);
+}
+
     ?>
 </body>
 </html>
